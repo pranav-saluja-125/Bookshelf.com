@@ -1,0 +1,3336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookshelf</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="icon" href="img/b.jpg" type="image.jpg">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets2/css/style-prefix.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+
+  <div class="overlay" data-overlay></div>
+
+  <!--
+    - MODAL
+  -->
+
+  <div class="modal" data-modal>
+
+    <div class="modal-close-overlay" data-modal-overlay></div>
+
+    <div class="modal-content">
+
+      <button class="modal-close-btn" data-modal-close>
+        <ion-icon name="close-outline" style="background-color: red;"></ion-icon>
+      </button>
+
+      <div class="newsletter-img">
+        <img src="img/bookstore login.jpg" alt="subscribe newsletter" width="400" height="400">
+      </div>
+
+      <div class="newsletter">
+
+        <form action="#">
+
+          <div class="newsletter-header">
+
+            <h3 class="newsletter-title">Subscribe BookShelf.</h3>
+
+            <p class="newsletter-desc">
+              Subscribe the <b style="color: red;">BookShelf</b> to get latest products and discount update.
+            </p>
+
+          </div>
+
+          <input type="email" name="email" class="email-field" placeholder="Email Address" required>
+
+          <button type="submit" class="btn-newsletter">Subscribe</button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <!--
+    - NOTIFICATION TOAST
+  -->
+
+  <div class="notification-toast" data-toast>
+
+    <button class="toast-close-btn" data-toast-close>
+      <ion-icon name="close-outline"></ion-icon>
+    </button>
+
+    <div class="toast-banner">
+      <img src="img/verity.jpg" width="120" height="100">
+    </div>
+
+    <div class="toast-detail">
+
+      <p class="toast-message">
+        Someone in new just bought
+      </p>
+
+      <p class="toast-title">
+        Verity
+      </p>
+
+      <p class="toast-meta">
+        <time datetime="PT2M">2 Minutes</time> ago
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <!--
+    - HEADER
+  -->
+
+  <header>
+
+    <div class="header-top">
+
+      <div class="container">
+
+        <ul class="header-social-container">
+
+          <li>
+            <a href="https://www.facebook.com/" class="social-link">
+              <ion-icon name="logo-facebook" style="color: red;"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.twitter.com/" class="social-link">
+              <ion-icon name="logo-twitter" style="color: red;"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.instagram.com/" class="social-link">
+              <ion-icon name="logo-instagram" style="color: red;"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.linkedin.com/in/saluja-pranav125/" class="social-link">
+              <ion-icon name="logo-linkedin" style="color: red;"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+        <div class="header-alert-news">
+          <p>
+            <b>Free Shipping</b>
+            This Week Order Over - ₹100
+          </p>
+        </div>
+
+        <div class="header-top-actions">
+
+          <select name="currency">
+
+            <option value="INR">INR ₹</option>
+            <option value="USD">USD &dollar;</option>
+
+          </select>
+
+          <select name="language">
+
+            <option value="en-US">English</option>
+            <option value="es-ES">Hindi</option>
+
+          </select>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="header-main">
+
+      <div class="container">
+
+        <a href="index.html" class="header-logo">
+          <img src="img/b.jpg" width="50" height="46">
+        </a>
+
+        <div class="header-search-container">
+
+          <input type="search" name="search" class="search-field" placeholder="Enter your product name...">
+
+          <button class="search-btn">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+
+        </div>
+
+        <div class="header-user-actions">
+
+          <button class="action-btn">
+            <ion-icon name="person-outline"></ion-icon>
+          </button>
+
+          <button class="action-btn">
+            <ion-icon name="heart-outline" id="johncena"></ion-icon>
+            <span class="count">0</span>
+          </button>
+
+          <button class="action-btn">
+            <ion-icon name="bag-handle-outline"></ion-icon>
+            <span class="count">0</span>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <nav class="desktop-navigation-menu">
+
+      <div class="container">
+
+        <ul class="desktop-menu-category-list">
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">Home</a>
+          </li>
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">Categories</a>
+
+            <div class="dropdown-panel">
+
+              <ul class="dropdown-panel-list">
+
+                <li class="menu-title">
+                  <a href="#">Used/Donated</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Primary(1-8)</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Secondary(9-12)</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Kids</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Novels</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Biography</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="img/usedbookssell.jpg"  width="250"
+                      height="125">
+                  </a>
+                </li>
+
+              </ul>
+
+              <ul class="dropdown-panel-list">
+
+                <li class="menu-title">
+                  <a href="#">Education</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Maths</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Science</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Language</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Computer</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Higher Studies</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="img/dis.jpg"  width="250" height="119">
+                  </a>
+                </li>
+
+              </ul>
+
+              <ul class="dropdown-panel-list">
+
+                <li class="menu-title">
+                  <a href="#">Novels</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Fiction</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Romance</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Sci-Fi</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Mystery</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Crime Thriller</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="img/hardcoverpaperbacl.jpg"  width="250" height="119">
+                  </a>
+                </li>
+
+              </ul>
+
+              <ul class="dropdown-panel-list">
+                <br>
+                <li class="menu-title">
+                  <a href="#"></a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Historical</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Poetry</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Fantasy</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Psychological</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Comics</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="img/discountbooks.jpg"  width="250" height="119">
+                  </a>
+                </li>
+
+              </ul>
+
+            </div>
+          </li>
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">Genre</a>
+
+            <ul class="dropdown-list">
+
+              <li class="dropdown-item">
+                <a href="#">Fiction</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Romance</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Motivational</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Action</a>
+              </li>
+
+            </ul>
+          </li>
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">Group</a>
+
+            <ul class="dropdown-list">
+
+              <li class="dropdown-item">
+                <a href="#">Kids</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Teenagers</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Millenials</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Adult</a>
+              </li>
+
+            </ul>
+          </li>
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">Author</a>
+
+            <ul class="dropdown-list">
+
+              <li class="dropdown-item">
+                <a href="#">J.K. Rowling</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">J.R.R Tolkien</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Chetan Bhagat</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Colleen Hoover</a>
+              </li>
+
+            </ul>
+          </li>
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">Comics</a>
+
+            <ul class="dropdown-list">
+
+              <li class="dropdown-item">
+                <a href="#">Complete Series</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Manga</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Superhero</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Cartoon</a>
+              </li>
+
+            </ul>
+          </li>
+
+          <li class="menu-category">
+            <a href="assets/html/donate.html" class="menu-title">Donate</a>
+          </li>
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">Hot Offers</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </nav>
+
+    <div class="mobile-bottom-navigation">
+
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <button class="action-btn">
+        <ion-icon name="bag-handle-outline"></ion-icon>
+
+        <span class="count">0</span>
+      </button>
+
+      <button class="action-btn">
+        <ion-icon name="home-outline"></ion-icon>
+      </button>
+
+      <button class="action-btn">
+        <ion-icon name="heart-outline"></ion-icon>
+
+        <span class="count">0</span>
+      </button>
+
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="grid-outline"></ion-icon>
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <!--
+    - MAIN
+  -->
+
+  <main>
+
+    <!--
+      - BANNER
+    -->
+
+    <div class="banner">
+
+      <div class="container">
+
+        <div class="slider-container has-scrollbar">
+
+          <div class="slider-item">
+
+            <img src="img/sale.webp" class="banner-img">
+
+            <div class="banner-content">
+
+              <p class="banner-subtitle"></p>
+
+              <h2 class="banner-title"></h2>
+
+              <p class="banner-text">
+                <!-- starting at &dollar; <b>20</b>.00 -->
+              </p><br><br><br><br><br><br><br><br><br>
+
+              <a href="#" class="banner-btn">Shop now</a>
+
+            </div>
+
+          </div>
+
+          <div class="slider-item">
+
+            <img src="img/secondslide.jpg" class="banner-img">
+
+            <div class="banner-content">
+              <br><br><br><br><br>
+              <!-- <p class="banner-subtitle">Trending accessories</p>
+
+              <h2 class="banner-title">Modern sunglasses</h2>
+
+              <p class="banner-text">
+                starting at &dollar; <b>15</b>.00
+              </p> -->
+
+              <!-- <a href="#" class="banner-btn">Shop now</a> -->
+
+            </div>
+
+          </div>
+
+          <div class="slider-item">
+
+            <img src="img/sellbooks.jpg"  class="banner-img">
+
+            <div class="banner-content">
+
+             
+<br><br><br><br><br><br><br>
+              <a href="#" class="banner-btn">Sell now</a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+    <!--
+      - CATEGORY
+    -->
+
+    <div class="category">
+
+      <div class="container">
+
+        <div class="category-item-container has-scrollbar">
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="img/red - Copy.jpg"  width="30">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Novel</h3>
+
+                <p class="category-item-amount">(153)</p>
+              </div>
+
+              <a href="#" class="category-btn">Show all</a>
+
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="img/red - Copy (3).jpg"  width="30">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Romance</h3>
+
+                <p class="category-item-amount">(58)</p>
+              </div>
+
+              <a href="#" class="category-btn">Show all</a>
+
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="img/red - Copy (4).jpg"  width="30">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Fiction</h3>
+
+                <p class="category-item-amount">(68)</p>
+              </div>
+
+              <a href="#" class="category-btn">Show all</a>
+
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="img/red - Copy (8).jpg"  width="30">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Comedy Drama</h3>
+
+                <p class="category-item-amount">(84)</p>
+              </div>
+
+              <a href="#" class="category-btn">Show all</a>
+
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="img/red - Copy (7).jpg"  width="30">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Motivational</h3>
+
+                <p class="category-item-amount">(35)</p>
+              </div>
+
+              <a href="#" class="category-btn">Show all</a>
+
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="img/red - Copy (6).jpg"  width="30">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Short Stories</h3>
+
+                <p class="category-item-amount">(16)</p>
+              </div>
+
+              <a href="#" class="category-btn">Show all</a>
+
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="img/red - Copy (2).jpg"  width="30">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Weekly</h3>
+
+                <p class="category-item-amount">(27)</p>
+              </div>
+
+              <a href="#" class="category-btn">Show all</a>
+
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="img/red - Copy (5).jpg"  width="30">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Adult</h3>
+
+                <p class="category-item-amount">(39)</p>
+              </div>
+
+              <a href="#" class="category-btn">Show all</a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+    <!--
+      - PRODUCT
+    -->
+
+    <div class="product-container">
+
+      <div class="container">
+
+
+        <!--
+          - SIDEBAR
+        -->
+
+        <div class="sidebar  has-scrollbar" data-mobile-menu>
+
+          <div class="sidebar-category">
+
+            <div class="sidebar-top">
+              <h2 class="sidebar-title">Category</h2>
+
+              <button class="sidebar-close-btn" data-mobile-menu-close-btn>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+            </div>
+
+            <ul class="sidebar-menu-category-list">
+
+              <li class="sidebar-menu-category">
+
+                <button class="sidebar-accordion-menu" data-accordion-btn>
+
+                  <div class="menu-title-flex">
+                    <img src="img/red - Copy.jpg" width="20" height="20"
+                      class="menu-title-img">
+
+                    <p class="menu-title">Novels</p>
+                  </div>
+
+                  <div>
+                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                  </div>
+
+                </button>
+
+                <ul class="sidebar-submenu-category-list" data-accordion>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Fiction</p>
+                      <data value="300" class="stock" title="Available Stock">300</data>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Fantasy</p>
+                      <data value="60" class="stock" title="Available Stock">60</data>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Sci-fi</p>
+                      <data value="50" class="stock" title="Available Stock">50</data>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Crime</p>
+                      <data value="87" class="stock" title="Available Stock">87</data>
+                    </a>
+                  </li>
+
+                </ul>
+
+              </li>
+
+              <li class="sidebar-menu-category">
+
+                <button class="sidebar-accordion-menu" data-accordion-btn>
+
+                  <div class="menu-title-flex">
+                    <img src="./assets2/images/icons/shoes.svg" alt="footwear" class="menu-title-img" width="20"
+                      height="20">
+
+                    <p class="menu-title">Education</p>
+                  </div>
+
+                  <div>
+                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                  </div>
+
+                </button>
+
+                <ul class="sidebar-submenu-category-list" data-accordion>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Elementary</p>
+                      <data value="45" class="stock" title="Available Stock">45</data>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">HighSchool</p>
+                      <data value="75" class="stock" title="Available Stock">75</data>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">College</p>
+                      <data value="35" class="stock" title="Available Stock">35</data>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Others</p>
+                      <data value="26" class="stock" title="Available Stock">26</data>
+                    </a>
+                  </li>
+
+                </ul>
+
+              </li>
+
+              <li class="sidebar-menu-category">
+
+                <button class="sidebar-accordion-menu" data-accordion-btn>
+
+                  <div class="menu-title-flex">
+                    <img src="./assets2/images/icons/jewelry.svg" alt="clothes" class="menu-title-img" width="20"
+                      height="20">
+
+                    <p class="menu-title">Recommended</p>
+                  </div>
+
+                  <div>
+                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                  </div>
+
+                </button>
+
+                <ul class="sidebar-submenu-category-list" data-accordion>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">BestSellers</p>
+                      <data value="46" class="stock" title="Available Stock">46</data>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Critics Choice</p>
+                      <data value="73" class="stock" title="Available Stock">73</data>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Most Popular</p>
+                      <data value="61" class="stock" title="Available Stock">61</data>
+                    </a>
+                  </li>
+
+                </ul>
+
+              </li>
+
+              <li class="sidebar-menu-category">
+
+                <button class="sidebar-accordion-menu" data-accordion-btn>
+
+                  <div class="menu-title-flex">
+                    <img src="./assets2/images/icons/perfume.svg" alt="perfume" class="menu-title-img" width="20"
+                      height="20">
+
+                    <p class="menu-title">Author</p>
+                  </div>
+
+                  <div>
+                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                  </div>
+
+                </button>
+
+                <ul class="sidebar-submenu-category-list" data-accordion>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">George R.R. Martin</p>
+                      <data value="12" class="stock" title="Available Stock">12 pcs</data>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Fitzgerald</p>
+                      <data value="60" class="stock" title="Available Stock">60 pcs</data>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Monet</p>
+                      <data value="50" class="stock" title="Available Stock">50 pcs</data>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Colleen Hoover</p>
+                      <data value="87" class="stock" title="Available Stock">87 pcs</data>
+                    </a>
+                  </li>
+
+                </ul>
+
+              </li>
+
+              <li class="sidebar-menu-category">
+
+                <button class="sidebar-accordion-menu" data-accordion-btn>
+
+                  <div class="menu-title-flex">
+                    <img src="./assets2/images/icons/cosmetics.svg"  class="menu-title-img" width="20"
+                      height="20">
+
+                    <p class="menu-title">Length</p>
+                  </div>
+
+                  <div>
+                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                  </div>
+
+                </button>
+
+                <ul class="sidebar-submenu-category-list" data-accordion>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">1 book</p>
+                      <data value="68" class="stock" title="Available Stock">68</data>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Doublet</p>
+                      <data value="46" class="stock" title="Available Stock">46</data>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Trilogy</p>
+                      <data value="79" class="stock" title="Available Stock">79</data>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Series</p>
+                      <data value="23" class="stock" title="Available Stock">23</data>
+                    </a>
+                  </li>
+
+                </ul>
+
+              </li>
+
+              <li class="sidebar-menu-category">
+
+                <button class="sidebar-accordion-menu" data-accordion-btn>
+
+                  <div class="menu-title-flex">
+                    <img src="./assets2/images/icons/glasses.svg"  class="menu-title-img" width="20"
+                      height="20">
+
+                    <p class="menu-title">Biography</p>
+                  </div>
+
+                  <div>
+                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                  </div>
+
+                </button>
+
+                <ul class="sidebar-submenu-category-list" data-accordion>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Autobiography</p>
+                      <data value="50" class="stock" title="Available Stock">50</data>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Historical</p>
+                      <data value="48" class="stock" title="Available Stock">48</data>
+                    </a>
+                  </li>
+
+                </ul>
+
+              </li>
+
+              <li class="sidebar-menu-category">
+
+                <button class="sidebar-accordion-menu" data-accordion-btn>
+
+                  <div class="menu-title-flex">
+                    <img src="./assets2/images/icons/bag.svg"  class="menu-title-img" width="20" height="20">
+
+                    <p class="menu-title">Classics</p>
+                  </div>
+
+                  <div>
+                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                  </div>
+
+                </button>
+
+                <ul class="sidebar-submenu-category-list" data-accordion>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="assets/html/buy.html" class="sidebar-submenu-title">
+                      <p class="product-name">Charles Dickens</p>
+                      <data value="62" class="stock" title="Available Stock">62</data>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="assets/html/buy.html" class="sidebar-submenu-title">
+                      <p class="product-name">Mark Twain</p>
+                      <data value="35" class="stock" title="Available Stock">35</data>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="assets/html/buy.html" class="sidebar-submenu-title">
+                      <p class="product-name">F. Scott Fitzgerald</p>
+                      <data value="80" class="stock" title="Available Stock">80</data>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="assets/html/buy.html" class="sidebar-submenu-title">
+                      <p class="product-name">Fyodor Dostoevsky</p>
+                      <data value="75" class="stock" title="Available Stock">75</data>
+                    </a>
+                  </li>
+
+                </ul>
+
+              </li>
+
+            </ul>
+
+          </div>
+
+          <div class="product-showcase">
+
+            <h3 class="showcase-heading">Best sellers</h3>
+
+            <div class="showcase-wrapper">
+
+              <div class="showcase-container">
+
+                <div class="showcase">
+
+                  <a href="assets/html/buy.html" class="showcase-img-box">
+                    <img src="img/itendswithus.jpg"  width="75" height="75"
+                      class="showcase-img">
+                  </a>
+
+                  <div class="showcase-content">
+
+                    <a href="#">
+                      <h4 class="showcase-title">It Ends With Us</h4>
+                    </a>
+
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                      <del>$50.00</del>
+                      <p class="price" style="color: red;">$40.00</p>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="showcase">
+
+                  <a href="assets/html/buy.html" class="showcase-img-box">
+                    <img src="img/fiftyshades.jpg"  class="showcase-img"
+                      width="75" height="75">
+                  </a>
+
+                  <div class="showcase-content">
+
+                    <a href="assets/html/buy.html">
+                      <h4 class="showcase-title">Fifty Shades Of Grey</h4>
+                    </a>
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star-half-outline"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                      <del>$17.00</del>
+                      <p class="price" style="color: red;">$7.00</p>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="showcase">
+
+                  <a href="assets/html/buy.html" class="showcase-img-box">
+                    <img src="img/american.jpg"  class="showcase-img" width="75"
+                      height="75">
+                  </a>
+
+                  <div class="showcase-content">
+
+                    <a href="assets/html/buy.html">
+                      <h4 class="showcase-title">American Psycho</h4>
+                    </a>
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star-half-outline"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                      <del>$5.00</del>
+                      <p class="price" style="color: red;">$3.00</p>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="showcase">
+
+                  <a href="assets/html/buy.html" class="showcase-img-box">
+                    <img src="img/Thegreatgatsby.jpg" class="showcase-img" width="75"
+                      height="75">
+                  </a>
+
+                  <div class="showcase-content">
+
+                    <a href="assets/html/buy.html">
+                      <h4 class="showcase-title">The Great Gatsby</h4>
+                    </a>
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                      <del>$15.00</del>
+                      <p class="price" style="color: red;">$12.00</p>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="product-box">
+
+          <!--
+            - PRODUCT MINIMAL
+          -->
+
+          <div class="product-minimal">
+
+            <div class="product-showcase">
+
+              <h2 class="title">Series</h2>
+
+              <div class="showcase-wrapper has-scrollbar">
+
+                <div class="showcase-container">
+
+                  <div class="showcase">
+
+                    <a href="assets/html/buy.html" class="showcase-img-box">
+                      <img src="img/harrypotter.jpg" 
+                        width="70" height="90px" class="showcase-img">
+                    </a>
+
+                    <div class="showcase-content">
+
+                      <a href="assets/html/buy.html">
+                        <h4 class="showcase-title">Harry Potter</h4>
+                      </a>
+
+                      <a href="assets/html/buy.html" class="showcase-category">J.K. Rowling</a>
+
+                      <div class="price-box">
+                        <p class="price" style="color: red;">$20.00</p>
+                        <del>$45.00</del>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="showcase">
+
+                    <a href="assets/html/buy.html" class="showcase-img-box">
+                      <img src="img/twilight.jpg"
+                        class="showcase-img" width="70">
+                    </a>
+
+                    <div class="showcase-content">
+
+                      <a href="assets/html/buy.html">
+                        <h4 class="showcase-title">Twilight</h4>
+                      </a>
+
+                      <a href="assets/html/buy.html" class="showcase-category">Stephenie Meyer</a>
+
+                      <div class="price-box">
+                        <p class="price" style="color: red;">$9.00</p>
+                        <del>$61.00</del>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="showcase">
+
+                    <a href="assets/html/buy.html" class="showcase-img-box">
+                      <img src="img/hungergames2.jpg" 
+                        class="showcase-img" width="70">
+                    </a>
+
+                    <div class="showcase-content">
+
+                      <a href="assets/html/buy.html">
+                        <h4 class="showcase-title">Hunger Games</h4>
+                      </a>
+
+                      <a href="assets/html/buy.html" class="showcase-category">Suzanne Collins</a>
+
+                      <div class="price-box">
+                        <p class="price" style="color: red;">$25.00</p>
+                        <del>$76.00</del>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="showcase">
+
+                    <a href="assets/html/buy.html" class="showcase-img-box">
+                      <img src="img/got.jpg" 
+                        class="showcase-img" width="70">
+                    </a>
+
+                    <div class="showcase-content">
+
+                      <a href="assets\html\buy.html">
+                        <h4 class="showcase-title">A Song of Ice and Fire</h4>
+                      </a>
+
+                      <a href="assets/html/buy.html" class="showcase-category">George R.R. Martin</a>
+
+                      <div class="price-box">
+                        <p class="price" style="color: red;">$31.00</p>
+                        <del>$68.00</del>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="showcase-container">
+
+                  <div class="showcase">
+
+                    <a href="assets/html/buy.html" class="showcase-img-box">
+                      <img src="img/goosebumps.jpg" 
+                        class="showcase-img" width="70">
+                    </a>
+
+                    <div class="showcase-content">
+
+                      <a href="assets/html/buy.html">
+                        <h4 class="showcase-title">Goosebumps</h4>
+                      </a>
+
+                      <a href="assets/html/buy.html" class="showcase-category">R. L. Stine</a>
+
+                      <div class="price-box">
+                        <p class="price" style="color: red;">$11.00</p>
+                        <del>$61.00</del>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="showcase">
+
+                    <a href="assets/html/buy.html" class="showcase-img-box">
+                      <img src="img/lord.png" 
+                        class="showcase-img" width="70">
+                    </a>
+
+                    <div class="showcase-content">
+
+                      <a href="assets/html/buy.html">
+                        <h4 class="showcase-title">The Lords Of The Rings</h4>
+                      </a>
+
+                      <a href="assets/html/buy.html" class="showcase-category">J.R.R. Tolkien</a>
+
+                      <div class="price-box">
+                        <p class="price" style="color: red;">$20.00</p>
+                        <del>$32.00</del>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="showcase">
+
+                    <a href="assets/html/buy.html" class="showcase-img-box">
+                      <img src="img/narnia.jpg" 
+                        class="showcase-img" width="70">
+                    </a>
+
+                    <div class="showcase-content">
+
+                      <a href="assets/html/buy.html">
+                        <h4 class="showcase-title">The Chronicles of Narnia</h4>
+                      </a>
+
+                      <a href="assets/html/buy.html" class="showcase-category">C.S. Lewis</a>
+
+                      <div class="price-box">
+                        <p class="price" style="color: red;">$25.00</p>
+                        <del>$50.00</del>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="showcase">
+
+                    <a href="assets/html/buy.html" class="showcase-img-box">
+                      <img src="img/fiftyshades.jpg" 
+                        class="showcase-img" width="70">
+                    </a>
+
+                    <div class="showcase-content">
+
+                      <a href="assets/html/buy.html">
+                        <h4 class="showcase-title">Fifty Shades</h4>
+                      </a>
+
+                      <a href="assets/html/buy.html" class="showcase-category">E. L. James</a>
+
+                      <div class="price-box">
+                        <p class="price" style="color: red;">$10.00</p>
+                        <del>$20.00</del>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="product-showcase">
+
+              <h2 class="title">Trending</h2>
+
+              <div class="showcase-wrapper  has-scrollbar">
+
+                <div class="showcase-container">
+
+                  <div class="showcase">
+
+                    <a href="assets/html/buy.html" class="showcase-img-box">
+                      <img src="img/dark matter.jpg" 
+                        class="showcase-img" width="70">
+                    </a>
+
+                    <div class="showcase-content">
+
+                      <a href="assets/html/buy.html">
+                        <h4 class="showcase-title">Dark Matter</h4>
+                      </a>
+
+                      <a href="assets/html/buy.html" class="showcase-category">Blake Crouch</a>
+
+                      <div class="price-box">
+                        <p class="price" style="color: red;">$19.00</p>
+                        <del>$35.00</del>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="showcase">
+
+                    <a href="assets/html/buy.html" class="showcase-img-box">
+                      <img src="img/godfather.jpg" 
+                        class="showcase-img" width="70">
+                    </a>
+
+                    <div class="showcase-content">
+
+                      <a href="assets/html/buy.html">
+                        <h4 class="showcase-title">The GodFather</h4>
+                      </a>
+
+                      <a href="assets/html/buy.html" class="showcase-category">Mario Puzo</a>
+
+                      <div class="price-box">
+                        <p class="price" style="color: red;">$38.00</p>
+                        <del>$66.00</del>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="showcase">
+
+                    <a href="assets/html/buy.html" class="showcase-img-box">
+                      <img src="img/verity.jpg" 
+                        class="showcase-img" width="70">
+                    </a>
+
+                    <div class="showcase-content">
+
+                      <a href="assets/html/buy.html">
+                        <h4 class="showcase-title">Verity</h4>
+                      </a>
+
+                      <a href="assets/html/buy.html" class="showcase-category">Colleen Hoover</a>
+
+                      <div class="price-box">
+                        <p class="price" style="color: red;">$14.00</p>
+                        <del>$92.00</del>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="showcase">
+
+                    <a href="assets/html/buy.html" class="showcase-img-box">
+                      <img src="img/goosebumps 1.jpg" 
+                        class="showcase-img" width="70">
+                    </a>
+
+                    <div class="showcase-content">
+
+                      <a href="assets/html/buy.html">
+                        <h4 class="showcase-title">Goosebumps</h4>
+                      </a>
+
+                      <a href="assets/html/buy.html" class="showcase-category">R.L. Stine</a>
+
+                      <div class="price-box">
+                        <p class="price" style="color: red;">$64.00</p>
+                        <del>$55.00</del>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="showcase-container">
+
+                  <div class="showcase">
+
+                    <a href="assets/html/buy.html" class="showcase-img-box">
+                      <img src="img/narnia.jpg" 
+                        class="showcase-img" width="70">
+                    </a>
+
+                    <div class="showcase-content">
+
+                      <a href="assets/html/buy.html">
+                        <h4 class="showcase-title">The Chronicles Of Narnia</h4>
+                      </a>
+
+                      <a href="assets/html/buy.html" class="showcase-category">c. S. Lewis</a>
+
+                      <div class="price-box">
+                        <p class="price" style="color: red;">$32.00</p>
+                        <del>$55.00</del>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="showcase">
+
+                    <a href="assets/html/buy.html" class="showcase-img-box">
+                      <img src="img/itendswithus.jpg"  class="showcase-img"
+                        width="70">
+                    </a>
+
+                    <div class="showcase-content">
+
+                      <a href="assets/html/buy.html">
+                        <h4 class="showcase-title">It Ends WIth Us</h4>
+                      </a>
+
+                      <a href="assets/html/buy.html" class="showcase-category">Colleen Hoover</a>
+
+                      <div class="price-box">
+                        <p class="price" style="color: red;">$20.00</p>
+                        <del>$30.00</del>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="showcase">
+
+                    <a href="assets/html/buy.html" class="showcase-img-box">
+                      <img src="img/2 states.jpg" 
+                        class="showcase-img" width="70">
+                    </a>
+
+                    <div class="showcase-content">
+
+                      <a href="assets/html/buy.html">
+                        <h4 class="showcase-title">2 States</h4>
+                      </a>
+
+                      <a href="assets/html/buy.html" class="showcase-category">Chetan Bhagat</a>
+
+                      <div class="price-box">
+                        <p class="price" style="color: red;">$56.00</p>
+                        <del>$78.00</del>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="showcase">
+
+                    <a href="assets/html/buy.html" class="showcase-img-box">
+                      <img src="img/hungergames.jpg"  class="showcase-img"
+                        width="70">
+                    </a>
+
+                    <div class="showcase-content">
+
+                      <a href="assets/html/buy.html">
+                        <h4 class="showcase-title">Hunger Games</h4>
+                      </a>
+
+                      <a href="assets/html/buy.html" class="showcase-category">Suzzane Collins</a>
+
+                      <div class="price-box">
+                        <p class="price" style="color: red;">$50.00</p>
+                        <del>$55.00</del>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="product-showcase">
+
+              <h2 class="title">Top Rated</h2>
+
+              <div class="showcase-wrapper  has-scrollbar">
+
+                <div class="showcase-container">
+
+                  <div class="showcase">
+
+                    <a href="assets/html/buy.html" class="showcase-img-box">
+                      <img src="img/Thegreatgatsby.jpg" 
+                        class="showcase-img" width="70">
+                    </a>
+
+                    <div class="showcase-content">
+
+                      <a href="assets/html/buy.html">
+                        <h4 class="showcase-title">The Great Gatsby</h4>
+                      </a>
+
+                      <a href="assets/html/buy.html" class="showcase-category">F Scott Fitzgerald</a>
+
+                      <div class="price-box">
+                        <p class="price" style="color: red;">$30.00</p>
+                        <del>$44.00</del>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="showcase">
+
+                    <a href="assets/html/buy.html" class="showcase-img-box">
+                      <img src="img/dost.png" 
+                        class="showcase-img" width="70">
+                    </a>
+
+                    <div class="showcase-content">
+
+                      <a href="assets/html/buy.html">
+                        <h4 class="showcase-title">Crime And Punishment</h4>
+                      </a>
+
+                      <a href="assets/html/buy.html" class="showcase-category">Fyodor Dostoevsky</a>
+
+                      <div class="price-box">
+                        <p class="price" style="color: red;">$24.00</p>
+                        <del>$40.00</del>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="showcase">
+
+                    <a href="assets/html/buy.html" class="showcase-img-box">
+                      <img src="img/charles.jpg" 
+                        class="showcase-img" width="70">
+                    </a>
+
+                    <div class="showcase-content">
+
+                      <a href="assets/html/buy.html">
+                        <h4 class="showcase-title">A Christmas Carol</h4>
+                      </a>
+
+                      <a href="assets/html/buy.html" class="showcase-category">Charles Dickens</a>
+
+                      <div class="price-box">
+                        <p class="price" style="color: red;">$32.00</p>
+                        <del>$40.00</del>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="showcase">
+
+                    <a href="assets/html/buy.html" class="showcase-img-box">
+                      <img src="img/american.jpg" 
+                        class="showcase-img" width="70">
+                    </a>
+
+                    <div class="showcase-content">
+
+                      <a href="assets/html/buy.html">
+                        <h4 class="showcase-title">American Psycho</h4>
+                      </a>
+
+                      <a href="assets/html/buy.html" class="showcase-category">BRET EASTON ELLIS</a>
+
+                      <div class="price-box">
+                        <p class="price" style="color: red;">$14.00</p>
+                        <del>$24.00</del>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="showcase-container">
+
+                  <div class="showcase">
+
+                    <a href="assets/html/buy.html" class="showcase-img-box">
+                      <img src="img/witcher.jpg" 
+                        class="showcase-img" width="70">
+                    </a>
+
+                    <div class="showcase-content">
+
+                      <a href="assets/html/buy.html">
+                        <h4 class="showcase-title">Witcher</h4>
+                      </a>
+
+                      <a href="assets/html/buy.html" class="showcase-category">Alexander Spakowsi</a>
+
+                      <div class="price-box">
+                        <p class="price" style="color: red;">$62.00</p>
+                        <del>$65.00</del>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="showcase">
+
+                    <a href="assets/html/buy.html" class="showcase-img-box">
+                      <img src="img/caesar.jpg" class="showcase-img"
+                        width="70">
+                    </a>
+
+                    <div class="showcase-content">
+
+                      <a href="assets/html/buy.html">
+                        <h4 class="showcase-title">Julius Caesar</h4>
+                      </a>
+
+                      <a href="assets/html/buy.html" class="showcase-category">William Shakespeare</a>
+
+                      <div class="price-box">
+                        <p class="price" style="color: red;">$56.00</p>
+                        <del>$78.00</del>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="showcase">
+
+                    <a href="assets/html/buy.html#" class="showcase-img-box">
+                      <img src="img/space.jpg" 
+                        class="showcase-img" width="70">
+                    </a>
+
+                    <div class="showcase-content">
+
+                      <a href="assets/html/buy.html">
+                        <h4 class="showcase-title">Space and Universe</h4>
+                      </a>
+
+                      <a href="assets/html/buy.html" class="showcase-category">Encylopedia</a>
+
+                      <div class="price-box">
+                        <p class="price" style="color: red;">$20.00</p>
+                        <del>$30.00</del>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="showcase">
+
+                    <a href="assets/html/buy.html" class="showcase-img-box">
+                      <img src="img/it starts with us.jpg" 
+                        class="showcase-img" width="70">
+                    </a>
+
+                    <div class="showcase-content">
+
+                      <a href="assets/html/buy.html">
+                        <h4 class="showcase-title">It Starts With Us</h4>
+                      </a>
+
+                      <a href="assets/html/buy.html" class="showcase-category">Colleen Hoover</a>
+
+                      <div class="price-box">
+                        <p class="price" style="color: red;">$20.00</p>
+                        <del>$30.00</del>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+          <!--
+            - PRODUCT FEATURED
+          -->
+
+          <div class="product-featured">
+
+            <h2 class="title">Deal of the day</h2>
+
+            <div class="showcase-wrapper has-scrollbar">
+
+              <div class="showcase-container">
+
+                <div class="showcase">
+
+                  <div class="showcase-banner">
+                    <img src="img/verity.jpg" 
+                      class="showcase-img">
+                  </div>
+
+                  <div class="showcase-content">
+
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+                    </div>
+
+                    <a href="assets/html/buy.html">
+                      <h3 class="showcase-title">Verity By Colleen Hoover</h3>
+                    </a>
+
+                    <p class="showcase-desc">
+                      Lorem ipsum dolor sit amet consectetur Lorem ipsum
+                      dolor dolor sit amet consectetur Lorem ipsum dolor
+                    </p>
+
+                    <div class="price-box">
+                      <p class="price" style="color: red;">$50.00</p>
+
+                      <del>$80.00</del>
+                    </div>
+
+                    <button class="add-cart-btn" style="background-color: red;">add to cart</button>
+
+                    <div class="showcase-status">
+                      <div class="wrapper">
+                        <p>
+                          already sold: <b>20</b>
+                        </p>
+
+                        <p>
+                          available: <b>40</b>
+                        </p>
+                      </div>
+
+                      <div class="showcase-status-bar" style="color: red;"></div>
+                    </div>
+
+                    <div class="countdown-box">
+
+                      <p class="countdown-desc">
+                        Hurry Up! Offer ends in:
+                      </p>
+
+                      <div class="countdown">
+
+                        <div class="countdown-content">
+
+                          <p class="display-number">0</p>
+
+                          <p class="display-text">Days</p>
+
+                        </div>
+
+                        <div class="countdown-content">
+                          <p class="display-number">4</p>
+                          <p class="display-text">Hours</p>
+                        </div>
+
+                        <div class="countdown-content">
+                          <p class="display-number">59</p>
+                          <p class="display-text">Min</p>
+                        </div>
+
+                        <div class="countdown-content">
+                          <p class="display-number">00</p>
+                          <p class="display-text">Sec</p>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="showcase-container">
+
+                <div class="showcase">
+
+                  <div class="showcase-banner">
+                    <img src="img/gita.jpg" 
+                      class="showcase-img">
+                  </div>
+
+                  <div class="showcase-content">
+
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+                    </div>
+
+                    <h3 class="showcase-title">
+                      <a href="assets/html/buy.html" class="showcase-title">Shree Bhagavad Gita</a>
+                    </h3>
+
+                    <p class="showcase-desc">
+                      Lorem ipsum dolor sit amet consectetur Lorem ipsum
+                      dolor dolor sit amet consectetur Lorem ipsum dolor
+                    </p>
+
+                    <div class="price-box">
+                      <p class="price" style="color: red;">$90.00</p>
+                      <del>$100.00</del>
+                    </div>
+
+                    <button class="add-cart-btn" style="background-color: red;">add to cart</button>
+
+                    <div class="showcase-status">
+                      <div class="wrapper">
+                        <p> already sold: <b>15</b> </p>
+
+                        <p> available: <b>40</b> </p>
+                      </div>
+
+                      <div class="showcase-status-bar" style="color: red;" ></div>
+                    </div>
+
+                    <div class="countdown-box">
+
+                      <p class="countdown-desc">Hurry Up! Offer ends in:</p>
+
+                      <div class="countdown">
+                        <div class="countdown-content">
+                          <p class="display-number">1</p>
+                          <p class="display-text">Days</p>
+                        </div>
+
+                        <div class="countdown-content">
+                          <p class="display-number">14</p>
+                          <p class="display-text">Hours</p>
+                        </div>
+
+                        <div class="countdown-content">
+                          <p class="display-number">59</p>
+                          <p class="display-text">Min</p>
+                        </div>
+
+                        <div class="countdown-content">
+                          <p class="display-number">00</p>
+                          <p class="display-text">Sec</p>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+          <!--
+            - PRODUCT GRID
+          -->
+
+          <div class="product-main">
+
+            <h2 class="title">New Products</h2>
+
+            <div class="product-grid">
+
+              <div class="showcase">
+
+                <div class="showcase-banner">
+
+                  <img src="img/mockingbird.webp"  width="300"
+                    class="product-img default">
+                  <img src="img/mockingbird - Copy.jpg" alt="" width="300"
+                    class="product-img hover">
+
+                  <p class="showcase-badge">15%</p>
+
+                  <div class="showcase-actions">
+
+                    <button class="btn-action">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="repeat-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="bag-add-outline"></ion-icon>
+                    </button>
+
+                  </div>
+
+                </div>
+
+                <div class="showcase-content">
+
+                  <a href="assets/html/buy.html" class="showcase-category" style="color: red;">To Kill A Mockingbird</a>
+
+                  <a href="assets/html/buy.html">
+                    <h3 class="showcase-title">Harper Lee</h3>
+                  </a>
+
+                  <div class="showcase-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+
+                  <div class="price-box">
+                    <p class="price">$48.00</p>
+                    <del>$75.00</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="showcase">
+
+                <div class="showcase-banner">
+                  <img src="img/x maths 1.jpg" 
+                    class="product-img default" width="300">
+                  <img src="img/x maths.jpg" 
+                    class="product-img hover" width="300">
+
+                  <p class="showcase-badge angle black">sale</p>
+
+                  <div class="showcase-actions">
+                    <button class="btn-action">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="repeat-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="bag-add-outline"></ion-icon>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="showcase-content">
+                  <a href="assets/html/buy.html" class="showcase-category" style="color: red;">Class X Maths</a>
+
+                  <h3>
+                    <a href="assets/html/buy.html" class="showcase-title">NCERT</a>
+                  </h3>
+
+                  <div class="showcase-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+
+                  <div class="price-box">
+                    <p class="price">$45.00</p>
+                    <del>$56.00</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="showcase">
+
+                <div class="showcase-banner">
+                  <img src="img/hungergames.jpg" 
+                    class="product-img default" width="300">
+                  <img src="img/hungergames - Copy.jpg" 
+                    class="product-img hover" width="300">
+
+                  <div class="showcase-actions">
+                    <button class="btn-action">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="repeat-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="bag-add-outline"></ion-icon>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="showcase-content">
+                  <a href="assets/html/buy.html" class="showcase-category" style="color: red;">Hunger Games</a>
+
+                  <h3>
+                    <a href="assets/html/buy.html" class="showcase-title">Suzzane Collins</a>
+                  </h3>
+
+                  <div class="showcase-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+
+                  <div class="price-box">
+                    <p class="price">$58.00</p>
+                    <del>$65.00</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="showcase">
+
+                <div class="showcase-banner">
+                  <img src="img/goosebumps 1 old.jpg" 
+                    class="product-img default" width="300">
+                  <img src="img/goosebumps 1.jpg" 
+                    class="product-img hover" width="300">
+
+                  <p class="showcase-badge angle pink">new</p>
+
+                  <div class="showcase-actions">
+                    <button class="btn-action">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="repeat-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="bag-add-outline"></ion-icon>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="showcase-content">
+                  <a href="assets/html/buy.html" class="showcase-category" style="color: red;">Goosebumps</a>
+
+                  <h3>
+                    <a href="assets/html/buy.html" class="showcase-title">R. L. Stine</a>
+                  </h3>
+
+                  <div class="showcase-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+
+                  <div class="price-box">
+                    <p class="price">$25.00</p>
+                    <del>$35.00</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="showcase">
+
+                <div class="showcase-banner">
+                  <img src="img/dharma.jpg" alt="Casual Men's Brown shoes"
+                    class="product-img default" width="300">
+                  <img src="img/dharma old.jpg" alt="Casual Men's Brown shoes"
+                    class="product-img hover" width="300">
+
+                  <div class="showcase-actions">
+                    <button class="btn-action">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="repeat-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="bag-add-outline"></ion-icon>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="showcase-content">
+                  <a href="assets/html/buy.html" class="showcase-category" style="color: red;">Dharma</a>
+
+                  <h3>
+                    <a href="assets/html/buy.html" class="showcase-title">Sant Kabir</a>
+                  </h3>
+
+                  <div class="showcase-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+
+                  <div class="price-box">
+                    <p class="price">$99.00</p>
+                    <del>$105.00</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="showcase">
+
+                <div class="showcase-banner">
+                  <img src="img/deep work.jpg" alt="Pocket Watch Leather Pouch"
+                    class="product-img default" width="300">
+                  <img src="img/deep work old.jpg" alt="Pocket Watch Leather Pouch"
+                    class="product-img hover" width="300">
+
+                  <p class="showcase-badge angle black">sale</p>
+
+                  <div class="showcase-actions">
+                    <button class="btn-action">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="repeat-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="bag-add-outline"></ion-icon>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="showcase-content">
+                  <a href="assets/html/buy.html" class="showcase-category" style="color: red;">Deep Work</a>
+
+                  <h3>
+                    <a href="assets/html/buy.html" class="showcase-title">Cal Newport</a>
+                  </h3>
+
+                  <div class="showcase-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+
+                  <div class="price-box">
+                    <p class="price">$150.00</p>
+                    <del>$170.00</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="showcase">
+
+                <div class="showcase-banner">
+                  <img src="img/it starts with us.jpg" alt="Smart watche Vital Plus"
+                    class="product-img default" width="300">
+                  <img src="img/startswithus.jpg" alt="Smart watche Vital Plus"
+                    class="product-img hover" width="300">
+
+                  <div class="showcase-actions">
+                    <button class="btn-action">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="repeat-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="bag-add-outline"></ion-icon>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="showcase-content">
+                  <a href="assets/html/buy.html" class="showcase-category" style="color: red;">It Starts With Us</a>
+
+                  <h3>
+                    <a href="assets/html/buy.html" class="showcase-title">Colleen Hoover</a>
+                  </h3>
+
+                  <div class="showcase-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+
+                  <div class="price-box">
+                    <p class="price">$100.00</p>
+                    <del>$120.00</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="showcase">
+
+                <div class="showcase-banner">
+                  <img src="img/witcher.jpg" alt="Womens Party Wear Shoes"
+                    class="product-img default" width="300">
+                  <img src="img/witcher - Copy.jpg" alt="Womens Party Wear Shoes"
+                    class="product-img hover" width="300">
+
+                  <p class="showcase-badge angle black">sale</p>
+
+                  <div class="showcase-actions">
+                    <button class="btn-action">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="repeat-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="bag-add-outline"></ion-icon>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="showcase-content">
+                  <a href="assets/html/buy.html" class="showcase-category" style="color: red;">The Witcher</a>
+
+                  <h3>
+                    <a href="assets/html/buy.html" class="showcase-title">Andrez Spakowsi</a>
+                  </h3>
+
+                  <div class="showcase-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+
+                  <div class="price-box">
+                    <p class="price">$25.00</p>
+                    <del>$30.00</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="showcase">
+
+                <div class="showcase-banner">
+                  <img src="img/west 1.jpg" 
+                    class="product-img default" width="300">
+                  <img src="img/west.jpg" 
+                    class="product-img hover" width="300">
+
+                  <div class="showcase-actions">
+                    <button class="btn-action">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="repeat-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="bag-add-outline"></ion-icon>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="showcase-content">
+                  <a href="assets/html/buy.html" class="showcase-category" style="color: red;">The Chronicles Of the West</a>
+
+                  <h3>
+                    <a href="assets/html/buy.html" class="showcase-title">Emerson Hough</a>
+                  </h3>
+
+                  <div class="showcase-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+
+                  <div class="price-box">
+                    <p class="price">$32.00</p>
+                    <del>$45.00</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="showcase">
+
+                <div class="showcase-banner">
+                  <img src="img/a passage.jpg" 
+                    class="product-img default" width="300">
+                  <img src="img/a passage - Copy.jpg" 
+                    class="product-img hover" width="300">
+
+                  <p class="showcase-badge angle black">sale</p>
+
+                  <div class="showcase-actions">
+                    <button class="btn-action">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="repeat-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="bag-add-outline"></ion-icon>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="showcase-content">
+                  <a href="assets/html/buy.html" class="showcase-category" style="color: red;">A Passage To India</a>
+
+                  <h3>
+                    <a href="assets/html/buy.html" class="showcase-title">E. M. Forster</a>
+                  </h3>
+
+                  <div class="showcase-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+
+                  <div class="price-box">
+                    <p class="price">$58.00</p>
+                    <del>$64.00</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="showcase">
+
+                <div class="showcase-banner">
+                  <img src="img/xi maths 1.jpg" 
+                    class="product-img default" width="300">
+                  <img src="img/xi maths.jpg" 
+                    class="product-img hover" width="300">
+
+                  <div class="showcase-actions">
+                    <button class="btn-action">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="repeat-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="bag-add-outline"></ion-icon>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="showcase-content">
+                  <a href="assets/html/buy.html" class="showcase-category" style="color: red;">XI Maths</a>
+
+                  <h3>
+                    <a href="assets/html/buy.html" class="showcase-title">NCERT</a>
+                  </h3>
+
+                  <div class="showcase-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+
+                  <div class="price-box">
+                    <p class="price">$50.00</p>
+                    <del>$65.00</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="showcase">
+
+                <div class="showcase-banner">
+                  <img src="img/2 states.jpg" alt="Better Basics French Terry Sweatshorts"
+                    class="product-img default" width="300">
+                  <img src="img/2 states - Copy.jpg" alt="Better Basics French Terry Sweatshorts"
+                    class="product-img hover" width="300">
+
+                  <p class="showcase-badge angle black">sale</p>
+
+                  <div class="showcase-actions">
+                    <button class="btn-action">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="repeat-outline"></ion-icon>
+                    </button>
+
+                    <button class="btn-action">
+                      <ion-icon name="bag-add-outline"></ion-icon>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="showcase-content">
+                  <a href="assets/html/buy.html" class="showcase-category" style="color: red;">2 States</a>
+
+                  <h3>
+                    <a href="assets/html/buy.html" class="showcase-title">Chetan Bhagat</a>
+                  </h3>
+
+                  <div class="showcase-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+
+                  <div class="price-box">
+                    <p class="price">$78.00</p>
+                    <del>$85.00</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+    <!--
+      - TESTIMONIALS, CTA & SERVICE
+    -->
+
+    <div>
+
+      <div class="container">
+
+        <div class="testimonials-box">
+
+          <!--
+            - TESTIMONIALS
+          -->
+
+          <div class="testimonial">
+
+            <h2 class="title">Testimonial</h2>
+
+            <div class="testimonial-card">
+
+              <img src="img/pranav.jpg" alt="alan doe" class="testimonial-banner" width="80"
+                height="80">
+
+              <p class="testimonial-name">Pranav Saluja</p>
+
+              <p class="testimonial-title">CEO & Creator</p>
+
+              <img src="./assets2/images/icons/quotes.svg" alt="quotation" class="quotation-img" width="26">
+
+              <p class="testimonial-desc">
+                Lorem ipsum dolor sit amet consectetur Lorem ipsum
+                dolor dolor sit amet.
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <!--
+            - CTA
+          -->
+
+          <div class="cta-container">
+
+            <img src="img/latest.png" alt="summer collection" class="cta-banner">
+
+            <a href="#" class="cta-content">
+
+              <p class="discount">25% Discount</p>
+
+              <h2 class="cta-title">Summer collection</h2>
+
+              <p class="cta-text" style="color: red;">Starting @ $10</p>
+
+              <button class="cta-btn">Shop now</button>
+
+            </a>
+
+          </div>
+
+
+
+          <!--
+            - SERVICE
+          -->
+
+          <div class="service">
+
+            <h2 class="title">Our Services</h2>
+
+            <div class="service-container">
+
+              <a href="#" class="service-item">
+
+                <div class="service-icon">
+                  <ion-icon name="boat-outline" style="color: red;"></ion-icon>
+                </div>
+
+                <div class="service-content">
+
+                  <h3 class="service-title" style="color: red;">Worldwide Delivery</h3>
+                  <p class="service-desc">For Order Over $100</p>
+
+                </div>
+
+              </a>
+
+              <a href="#" class="service-item">
+
+                <div class="service-icon">
+                  <ion-icon name="rocket-outline" style="color: red;"></ion-icon>
+                </div>
+
+                <div class="service-content">
+
+                  <h3 class="service-title" style="color: red;">Next Day delivery</h3>
+                  <p class="service-desc">UK Orders Only</p>
+
+                </div>
+
+              </a>
+
+              <a href="#" class="service-item">
+
+                <div class="service-icon">
+                  <ion-icon name="call-outline" style="color: red;"></ion-icon>
+                </div>
+
+                <div class="service-content">
+
+                  <h3 class="service-title" style="color: red;">Best Online Support</h3>
+                  <p class="service-desc">Hours: 8AM - 11PM</p>
+
+                </div>
+
+              </a>
+
+              <a href="#" class="service-item">
+
+                <div class="service-icon">
+                  <ion-icon name="arrow-undo-outline" style="color: red;"></ion-icon>
+                </div>
+
+                <div class="service-content">
+
+                  <h3 class="service-title" style="color: red;">Return Policy</h3>
+                  <p class="service-desc">Easy & Free Return</p>
+
+                </div>
+
+              </a>
+
+              <a href="#" class="service-item">
+
+                <div class="service-icon">
+                  <ion-icon name="ticket-outline" style="color: red;"></ion-icon>
+                </div>
+
+                <div class="service-content">
+
+                  <h3 class="service-title" style="color: red;">Sell Used Books</h3>
+                  <p class="service-desc">Sell your old books at price chose by you</p>
+
+                </div>
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+    <!--
+      - BLOG
+    -->
+
+    <div class="blog">
+
+      <div class="container">
+
+        <div class="blog-container has-scrollbar">
+
+          <div class="blog-card">
+
+            <a href="assets/html/buy.html">
+              <img src="img/jk.jpg" alt="Clothes Retail KPIs 2021 Guide for Clothes Executives"
+                width="300" class="blog-banner">
+            </a>
+
+            <div class="blog-content">
+
+              <a href="assets/html/buy.html" class="blog-category" style="color: red;">J.K. Rowling</a>
+
+              <a href="assets/html/buy.html">
+                <h3 class="blog-title">Buy All the Books written by JK Rowling</h3>
+              </a>
+
+              <p class="blog-meta">
+                Sold By <cite>Mr Admin</cite> / <time datetime="2022-04-06">Apr 06, 2022</time>
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="blog-card">
+
+            <a href="assets/html/buy.html">
+              <img src="img/scott.jpg" alt="Curbside fashion Trends: How to Win the Pickup Battle."
+                class="blog-banner" width="300">
+            </a>
+
+            <div class="blog-content">
+
+              <a href="assets/html/buy.html" class="blog-category" style="color: red;">F. Scott Fitzgerald</a>
+
+              <h3>
+                <a href="assets/html/buy.html" class="blog-title">Get collection of all books by Fitzgerald</a>
+              </h3>
+
+              <p class="blog-meta">
+               Donated By <cite>Mr Robin</cite> / <time datetime="2022-01-18">Jan 18, 2022</time>
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="blog-card">
+
+            <a href="#">
+              <img src="img/x.jpeg" alt="EBT vendors: Claim Your Share of SNAP Online Revenue."
+                class="blog-banner" width="300">
+            </a>
+
+            <div class="blog-content">
+
+              <a href="assets/html/buy.html" class="blog-category" style="color: red;">Class X</a>
+
+              <h3>
+                <a href="assets/html/buy.html" class="blog-title">Class X complete CBSE Book Set</a>
+              </h3>
+
+              <p class="blog-meta">
+                Donated By <cite>Mr Selsa</cite> / <time datetime="2022-02-10">Feb 10, 2022</time>
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="blog-card">
+
+            <a href="assets/html/buy.html">
+              <img src="img/mark.jpg" 
+                class="blog-banner" width="300">
+            </a>
+
+            <div class="blog-content">
+
+              <a href="assets/html/buy.html" class="blog-category" style="color: red;">The Subtle Art Of Not Giving A F*ck</a>
+
+              <h3>
+                <a href="assets/html/buy.html" class="blog-title">A great Motivational book by Mark Manson</a>
+              </h3>
+
+              <p class="blog-meta">
+                Sold By <cite>Mr Pawar</cite> / <time datetime="2022-03-15">Mar 15, 2022</time>
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+
+
+
+  <!--
+    - FOOTER
+  -->
+
+  <footer>
+
+    <div class="footer-category">
+
+      <div class="container">
+
+        <h2 class="footer-category-title" style="color: red;">Brand directory</h2>
+
+        <div class="footer-category-box">
+
+          <h3 class="category-box-title">Publications</h3>
+
+          <a href="#" class="footer-category-link">Times</a>
+          <a href="#" class="footer-category-link">Vertigo</a>
+          <a href="#" class="footer-category-link">Arrow</a>
+          <a href="#" class="footer-category-link">Flash</a>
+          <a href="#" class="footer-category-link">Warner</a>
+          <a href="#" class="footer-category-link">Disney</a>
+          <a href="#" class="footer-category-link">Monet</a>
+
+        </div>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">Author</h3>
+
+          <a href="#" class="footer-category-link">J.K Rowling</a>
+          <a href="#" class="footer-category-link">Fitzgerald</a>
+          <a href="#" class="footer-category-link">Dostoevsky</a>
+          <a href="#" class="footer-category-link">Charles Dickens</a>
+          <a href="#" class="footer-category-link">J.R.R Tolkien</a>
+          <a href="#" class="footer-category-link">George R.R. Martin</a>
+          <a href="#" class="footer-category-link">Colleen Hoover</a>
+          <a href="#" class="footer-category-link">Chetan Bhagat</a>
+          <a href="#" class="footer-category-link">Mane</a>
+          <a href="#" class="footer-category-link">De Bryune</a>
+        </div>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">Genre</h3>
+
+          <a href="#" class="footer-category-link">Romance</a>
+          <a href="#" class="footer-category-link">Fiction</a>
+          <a href="#" class="footer-category-link">Latest</a>
+          <a href="#" class="footer-category-link">BestSellers</a>
+          <a href="#" class="footer-category-link">Action</a>
+          <a href="#" class="footer-category-link">Biography</a>
+          <a href="#" class="footer-category-link">Historical</a>
+          <a href="#" class="footer-category-link">Motivational</a>
+          <a href="#" class="footer-category-link">Sci-Fi</a>
+          <a href="#" class="footer-category-link">Humour</a>
+          <a href="#" class="footer-category-link">Erotic</a>
+        </div>
+
+        
+
+      </div>
+
+    </div>
+
+    <div class="footer-nav">
+
+      <div class="container">
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title" style="color: red;">Popular Categories</h2>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Novels</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Used</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Donated</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Motivational</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Education</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title" style="color: red;">Products</h2>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Prices drop</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">New products</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Best sales</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="assets\html\contact.html" class="footer-nav-link">Contact us</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Sitemap</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title" style="color: red;">Our Company</h2>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Delivery</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="assets\html\privacy.html" class="footer-nav-link">Legal Notice</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="assets\html\terms.html" class="footer-nav-link">Terms and conditions</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="assets\html\about.html" class="footer-nav-link">About us</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Secure payment</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title" style="color: red;">Services</h2>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Prices drop</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="./index2.html" class="footer-nav-link">New products</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Best sales</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="assets\html\contact.html" class="footer-nav-link">Contact us</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Sitemap</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title" style="color: red;">Contact</h2>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <address class="content">
+              Gurugram , Haryana , India
+            </address>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+
+            <a href="tel:+923126537041" class="footer-nav-link">(91+) 9988776655</a>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <a href="mailto:salujapranav12@gmail.com" class="footer-nav-link">BookShelf@gmail.com</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Follow Us</h2>
+          </li>
+
+          <li>
+            <ul class="social-link">
+
+              <li class="footer-nav-item">
+                <a href="https:/facebook.com" class="footer-nav-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="https:/twitter.com" class="footer-nav-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="https:/www.linkedin.com" class="footer-nav-link">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="https:/www.instagram.com" class="footer-nav-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <div class="container">
+        <p class="copyright">
+          Copyright &copy; <a href="./index.html">BookShelf</a> all rights reserved.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets2/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
